@@ -1,0 +1,8 @@
+com\zhu\api_video\controller\VideoController.class
+com\zhu\api_video\service\impl\VideoServiceImpl.class
+com\zhu\api_video\mapper\VideoMapper.class
+com\zhu\api_video\Application.class
+com\zhu\api_video\config\MybatisPlusConfig.class
+com\zhu\api_video\service\VideoService.class
+com\zhu\api_video\ApiVideoApplication.class
+com\zhu\api_video\entity\Video.class

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api_course/api_course.iml" filepath="$PROJECT_DIR$/api_course/api_course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api_gateway/api_gateway.iml" filepath="$PROJECT_DIR$/api_gateway/api_gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api_user/api_user.iml" filepath="$PROJECT_DIR$/api_user/api_user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api_video/api_video.iml" filepath="$PROJECT_DIR$/api_video/api_video.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stock_learning.iml" filepath="$PROJECT_DIR$/stock_learning.iml" />
+    </modules>
+  </component>
+</project>

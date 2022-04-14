@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: api-gateway
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 192.168.233.151:8848,192.168.233.152:8848,192.168.233.153:8848
+
+    gateway:
+      routes:
+        - id: user
+          uri: lb://api-user
+          predicates:
+            - Path=/user/**
+      discovery:
+        locator:
+          lower-case-service-id: true
+          enabled: true
+  main:
+    allow-bean-definition-overriding: true

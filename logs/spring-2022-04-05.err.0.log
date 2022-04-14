@@ -1,0 +1,2 @@
+[2m2022-04-05 18:31:26.803[0;39m [31mERROR[0;39m [35m53316[0;39m [2m---[0;39m [2m[nio-8082-exec-1][0;39m [36mn.d.m.servlet.error.MicaErrorAttributes [0;39m [2m:[0;39m URL:/permission/getByUser/ error status:404
+[2m2022-04-05 18:31:26.803[0;39m [31mERROR[0;39m [35m53316[0;39m [2m---[0;39m [2m[nio-8082-exec-2][0;39m [36mn.d.m.servlet.error.MicaErrorAttributes [0;39m [2m:[0;39m URL:/permission/getByUser/ error status:404

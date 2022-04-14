@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhu.api_user.mapper.RequestPathMapper">
+    <sql id="tableName">
+        t_request_path
+    </sql>
+
+    <sql id="baseColumn">
+        id,url,description
+    </sql>
+
+    <select id="selectByPermission" resultType="com.zhu.api_user.entity.RequestPath">
+        select rp.* from t_request_path rp
+            left join t_request_path_relation rpr on rp.id = rpr.url_id
+            where rpr.permission_id = #{permissionId};
+    </select>
+</mapper>

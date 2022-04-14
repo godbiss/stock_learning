@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api_course" />
+        <module name="api_gateway" />
+        <module name="api_video" />
+        <module name="api_user" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api_course" target="1.8" />
+      <module name="api_gateway" target="1.8" />
+      <module name="api_user" target="1.8" />
+      <module name="api_video" target="1.8" />
+      <module name="stock_learning" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api_course" options="" />
+      <module name="api_gateway" options="" />
+      <module name="api_user" options="" />
+      <module name="api_video" options="" />
+      <module name="stock_learning" options="" />
+    </option>
+  </component>
+</project>

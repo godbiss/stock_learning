@@ -1,0 +1,37 @@
+2022-04-13 12:08:13.101  INFO 8892 --- [           main] c.z.api_video.ApiVideoApplicationTests   : The following profiles are active: dev,db
+2022-04-13 12:08:13.895  WARN 8892 --- [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-04-13 12:08:14.059  INFO 8892 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d55c24d7-cfe5-3b53-a096-9a30f0f5f0f0
+2022-04-13 12:08:14.427  INFO 8892 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'mica.async-net.dreamlu.mica.props.MicaAsyncProperties' of type [net.dreamlu.mica.props.MicaAsyncProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-13 12:08:14.435  INFO 8892 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'net.dreamlu.mica.config.MicaExecutorConfiguration' of type [net.dreamlu.mica.config.MicaExecutorConfiguration$$EnhancerBySpringCGLIB$$36ea367d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-13 12:08:14.576  INFO 8892 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-13 12:08:14.778  INFO 8892 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$a6ea97ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-13 12:08:14.786  INFO 8892 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-13 12:08:14.794  INFO 8892 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'dynamicDatasourceAnnotationAdvisor' of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-13 12:08:15.058  INFO 8892 --- [           main] com.zaxxer.hikari.HikariDataSource       : master - Starting...
+2022-04-13 12:08:15.261  INFO 8892 --- [           main] com.zaxxer.hikari.HikariDataSource       : master - Start completed.
+2022-04-13 12:08:15.261  INFO 8892 --- [           main] c.b.d.d.DynamicRoutingDataSource         : dynamic-datasource - load a datasource named [master] success
+2022-04-13 12:08:15.262  INFO 8892 --- [           main] c.b.d.d.DynamicRoutingDataSource         : dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2022-04-13 12:08:16.559  WARN 8892 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-13 12:08:16.560  INFO 8892 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-13 12:08:16.569  WARN 8892 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-13 12:08:16.569  INFO 8892 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-13 12:08:17.185  INFO 8892 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-13 12:08:17.392  INFO 8892 --- [           main] d.m.s.v.MicaRequestMappingHandlerMapping : Mapped "{POST /video/upload}" onto com.zhu.api_video.controller.VideoController#pictureUpload(MultipartFile, String)
+2022-04-13 12:08:17.393  INFO 8892 --- [           main] d.m.s.v.MicaRequestMappingHandlerMapping : Mapped "{POST /video/uploads}" onto com.zhu.api_video.controller.VideoController#picturesUpload(MultipartFile[])
+2022-04-13 12:08:17.393  INFO 8892 --- [           main] d.m.s.v.MicaRequestMappingHandlerMapping : Mapped "{DELETE /video/delete/{id}}" onto com.zhu.api_video.controller.VideoController#videoDelete(Integer)
+2022-04-13 12:08:17.393  INFO 8892 --- [           main] d.m.s.v.MicaRequestMappingHandlerMapping : Mapped "{ /error, produces [text/html]}" onto net.dreamlu.mica.servlet.error.MicaErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2022-04-13 12:08:17.394  INFO 8892 --- [           main] d.m.s.v.MicaRequestMappingHandlerMapping : Mapped "{ /error}" onto net.dreamlu.mica.servlet.error.MicaErrorController#error(HttpServletRequest)
+2022-04-13 12:08:18.711  INFO 8892 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-04-13 12:08:20.559  INFO 8892 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-13 12:08:25.140  INFO 8892 --- [           main] c.z.api_video.ApiVideoApplicationTests   : Started ApiVideoApplicationTests in 14.877 seconds (JVM running for 16.386)
+2022-04-13 12:08:25.760  WARN 8892 --- [      Thread-12] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-04-13 12:08:25.760  WARN 8892 --- [       Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-04-13 12:08:25.762  WARN 8892 --- [      Thread-12] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-04-13 12:08:25.762  WARN 8892 --- [       Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-04-13 12:08:25.763  INFO 8892 --- [extShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2022-04-13 12:08:31.781  INFO 8892 --- [extShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2022-04-13 12:08:31.782  INFO 8892 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-13 12:08:31.785  INFO 8892 --- [extShutdownHook] c.b.d.d.DynamicRoutingDataSource         : dynamic-datasource start closing ....
+2022-04-13 12:08:31.785  INFO 8892 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : master - Shutdown initiated...
+2022-04-13 12:08:31.799  INFO 8892 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : master - Shutdown completed.
+2022-04-13 12:08:31.800  INFO 8892 --- [extShutdownHook] c.b.d.d.DynamicRoutingDataSource         : dynamic-datasource all closed success,bye

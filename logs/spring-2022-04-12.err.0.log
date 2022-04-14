@@ -1,0 +1,47 @@
+[2m2022-04-12 00:03:33.386[0;39m [31mERROR[0;39m [35m20032[0;39m [2m---[0;39m [2m[ctor-http-nio-2][0;39m [36mn.d.m.r.e.MicaErrorWebExceptionHandler  [0;39m [2m:[0;39m URL:/ error status:404
+[2m2022-04-12 00:17:10.779[0;39m [31mERROR[0;39m [35m16984[0;39m [2m---[0;39m [2m[ctor-http-nio-5][0;39m [36mn.d.m.r.e.MicaErrorWebExceptionHandler  [0;39m [2m:[0;39m URL:/ error status:404
+[2m2022-04-12 00:41:10.342[0;39m [31mERROR[0;39m [35m18012[0;39m [2m---[0;39m [2m[oundedElastic-2][0;39m [36mn.d.m.r.e.MicaErrorWebExceptionHandler  [0;39m [2m:[0;39m URL:/ error status:404
+[2m2022-04-12 12:12:33.309[0;39m [31mERROR[0;39m [35m8424[0;39m [2m---[0;39m [2m[oundedElastic-4][0;39m [36mc.a.c.n.d.r.NacosReactiveDiscoveryClient[0;39m [2m:[0;39m get services from nacos server fail,
+
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/service/list after all servers([192.168.233.151:8848, 192.168.233.152:8848, 192.168.233.153:8848]) tried: java.net.SocketException: Network is unreachable: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.1.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.1.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.1.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.getServiceList(NamingProxy.java:481) ~[nacos-client-1.4.1.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getServicesOfServer(NacosNamingService.java:502) ~[nacos-client-1.4.1.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getServicesOfServer(NacosNamingService.java:490) ~[nacos-client-1.4.1.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosServiceDiscovery.getServices(NacosServiceDiscovery.java:69) ~[spring-cloud-starter-alibaba-nacos-discovery-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at com.alibaba.cloud.nacos.discovery.reactive.NacosReactiveDiscoveryClient.lambda$getServices$1(NacosReactiveDiscoveryClient.java:75) ~[spring-cloud-starter-alibaba-nacos-discovery-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:46) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOn$SubscribeOnSubscriber.run(FluxSubscribeOn.java:194) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:84) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:37) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) ~[na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_181]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_181]
+
+[2m2022-04-12 12:44:40.453[0;39m [31mERROR[0;39m [35m8424[0;39m [2m---[0;39m [2m[oundedElastic-5][0;39m [36mc.a.c.n.d.r.NacosReactiveDiscoveryClient[0;39m [2m:[0;39m get services from nacos server fail,
+
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/service/list after all servers([192.168.233.151:8848, 192.168.233.152:8848, 192.168.233.153:8848]) tried: java.net.SocketTimeoutException: connect timed out
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.1.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.1.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.1.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.getServiceList(NamingProxy.java:481) ~[nacos-client-1.4.1.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getServicesOfServer(NacosNamingService.java:502) ~[nacos-client-1.4.1.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getServicesOfServer(NacosNamingService.java:490) ~[nacos-client-1.4.1.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosServiceDiscovery.getServices(NacosServiceDiscovery.java:69) ~[spring-cloud-starter-alibaba-nacos-discovery-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at com.alibaba.cloud.nacos.discovery.reactive.NacosReactiveDiscoveryClient.lambda$getServices$1(NacosReactiveDiscoveryClient.java:75) ~[spring-cloud-starter-alibaba-nacos-discovery-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:46) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOn$SubscribeOnSubscriber.run(FluxSubscribeOn.java:194) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:84) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:37) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) ~[na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_181]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_181]
+

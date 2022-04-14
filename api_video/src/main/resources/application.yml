@@ -1,0 +1,26 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: api-video
+  profiles:
+    active: dev,db
+  cloud:
+    nacos:
+      server-addr: 192.168.233.151:8848,192.168.233.152:8848,192.168.233.153:8848
+  servlet:
+    multipart:
+      max-file-size: 1GB
+      max-request-size: 1GB
+
+
+ftp:
+  host: 192.168.233.154
+  userName: root
+  password: root
+  port: 22
+  rootPath: /usr/local/nginx/upload/video
+  img:
+    url: http://${ftp.host}   # ftp.img.url 可以不添加，这里只是为了上传文件成功后返回文件路径
+
