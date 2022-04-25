@@ -1,5 +1,6 @@
 package com.zhu.api_user.util;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -53,4 +54,5 @@ public class JedisUtil {
             pool.close();
         }
     }
+
 }

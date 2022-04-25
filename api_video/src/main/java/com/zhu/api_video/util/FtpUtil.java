@@ -53,13 +53,23 @@ public class FtpUtil {
     }
 
     /**
-     * 存放图片的根目录
+     * 存放视频的根目录
      */
     private static String rootPath;
 
     @Value("${ftp.rootPath}")
     public void setRootPath(String val){
         FtpUtil.rootPath = val;
+    }
+
+    /**
+     * 存放图片的根目录
+     */
+    private static String imgLocation;
+
+    @Value("${ftp.imgLocation}")
+    public void setImgPath(String val){
+        FtpUtil.imgLocation = val;
     }
 
     /**
@@ -102,6 +112,37 @@ public class FtpUtil {
      * @return urlStr 图片的存放路径
      */
     public static String putImages(InputStream inputStream, String imagePath, String imagesName){
+        try {
+            ChannelSftp sftp = getChannel();
+            String path = imgLocation + imagePath + "/";
+            createDir(path,sftp);
+
+            //上传文件
+            sftp.put(inputStream, path + imagesName);
+            log.info("上传成功！");
+            sftp.quit();
+            sftp.exit();
+
+            //处理返回的路径
+            String resultFile;
+            resultFile = imgUrl + imagePath + imagesName;
+
+            return resultFile;
+
+        } catch (Exception e) {
+            log.error("上传失败：" + e.getMessage());
+        }
+        return "";
+    }
+
+    /**
+     * ftp上传视频
+     * @param inputStream 视频io流
+     * @param imagePath 路径，不存在就创建目录
+     * @param imagesName 视频名称
+     * @return urlStr 视频的存放路径
+     */
+    public static String putVideo(InputStream inputStream, String imagePath, String imagesName){
         try {
             ChannelSftp sftp = getChannel();
             String path = rootPath + imagePath + "/";
@@ -147,6 +188,21 @@ public class FtpUtil {
      * 删除图片
      */
     public static void delImages(String imagesName){
+        try {
+            ChannelSftp sftp = getChannel();
+            String path = imgLocation + imagesName;
+            sftp.rm(path);
+            sftp.quit();
+            sftp.exit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 删除图片
+     */
+    public static void delVideo(String imagesName){
         try {
             ChannelSftp sftp = getChannel();
             String path = rootPath + imagesName;

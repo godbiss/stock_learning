@@ -10,10 +10,12 @@
         <module name="api_course" />
         <module name="api_gateway" />
         <module name="api_video" />
+        <module name="api_comment" />
         <module name="api_user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api_comment" target="1.8" />
       <module name="api_course" target="1.8" />
       <module name="api_gateway" target="1.8" />
       <module name="api_user" target="1.8" />
@@ -23,6 +25,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api_comment" options="" />
       <module name="api_course" options="" />
       <module name="api_gateway" options="" />
       <module name="api_user" options="" />

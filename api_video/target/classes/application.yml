@@ -21,6 +21,7 @@ ftp:
   password: root
   port: 22
   rootPath: /usr/local/nginx/upload/video
+  imgLocation: /usr/local/nginx/upload/img
   img:
     url: http://${ftp.host}   # ftp.img.url 可以不添加，这里只是为了上传文件成功后返回文件路径
 

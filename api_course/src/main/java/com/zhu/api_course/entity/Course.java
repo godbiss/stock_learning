@@ -8,6 +8,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.math.BigDecimal;
 import java.util.Date;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
@@ -21,6 +23,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Accessors(chain = true)
 @TableName("t_course")
 public class Course extends Model<Course> implements Serializable {
@@ -48,6 +51,10 @@ public class Course extends Model<Course> implements Serializable {
      */
     private BigDecimal price;
     /**
+     * cover
+     */
+    private String cover;
+    /**
      * createtime
      */
     private Date createtime;
@@ -60,4 +67,8 @@ public class Course extends Model<Course> implements Serializable {
      */
     private Integer createUser;
 
+    /**
+     * catagoryId
+     */
+    private Integer catagoryId;
 }

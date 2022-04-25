@@ -1,6 +1,8 @@
 package com.zhu.api_user.entity;
 
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -29,7 +31,7 @@ public class User extends Model<User> implements Serializable {
     /**
      * id
      */
-    @TableId
+    @TableId(type = IdType.AUTO)
 	private Integer id;
     /**
      * 账号
@@ -43,6 +45,10 @@ public class User extends Model<User> implements Serializable {
      * 用户密码
      */
     private String password;
+    /**
+     * 头像
+     */
+    private String avator;
     /**
      * phoneNumber
      */
