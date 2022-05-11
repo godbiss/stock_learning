@@ -1,0 +1,12 @@
+server:
+  port: 18086
+
+spring:
+  application:
+    name: api-catagory
+  profiles:
+    active: dev,db
+  cloud:
+    nacos:
+      server-addr: 192.168.233.151:8848,192.168.233.152:8848,192.168.233.153:8848
+

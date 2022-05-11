@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhu.api_comment.mapper.CommentMapper">
+    <sql id="tableName">
+        t_comment
+    </sql>
+
+    <sql id="baseColumn">
+        id,content,createtime,updatetime,create_user,fid
+    </sql>
+
+    <insert id="insertCommtCourseRelation">
+        insert into t_comment_course_relation(comment_id, course_id) values (#{commentId}, #{courseId});
+    </insert>
+
+    <select id="checkCommentCourse" resultType="java.lang.Integer">
+        select id
+        from t_comment_course_relation
+        where comment_id = #{commentId} and course_id = #{courseId};
+    </select>
+
+    <insert id="insertCommentVideoRelation">
+        insert into t_comment_video_relation(comment_id, video_id) values (#{commentId}, #{videoId});
+    </insert>
+
+    <select id="checkCommentVideo" resultType="java.lang.Integer">
+        select id
+        from t_comment_video_relation
+        where comment_id = #{commentId} and video_id = #{videoId};
+    </select>
+    <select id="getCommentByCourse" resultType="com.zhu.api_comment.entity.Comment"
+            parameterType="java.lang.Integer">
+        select tc.* from t_comment tc
+            left join t_comment_course_relation tccr on tc.id = tccr.comment_id
+            where tccr.course_id = #{courseId};
+    </select>
+
+    <delete id="deleteCommentForCourse" >
+        delete from t_comment_course_relation where comment_id = #{id};
+    </delete>
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhu.api_news.mapper.NewsMapper">
+    <sql id="tableName">
+        t_news
+    </sql>
+
+    <sql id="baseColumn">
+        id,title,content,author,createtime,updatetime,create_user,update_user
+    </sql>
+
+</mapper>
